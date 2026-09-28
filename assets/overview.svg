@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#ffffff"/>
+  <style>
+    .title{font:700 38px Arial,sans-serif;fill:#113a6b}
+    .h{font:700 22px Arial,sans-serif;fill:#113a6b}
+    .b{font:400 16px Arial,sans-serif;fill:#4d6279}
+    .s{font:400 14px Arial,sans-serif;fill:#60758c}
+    .box{fill:#f7fbff;stroke:#78a9dc;stroke-width:2}
+    .inner{fill:#eef6ff;stroke:#bfd8ef;stroke-width:1.5}
+    .arrow{stroke:#3e73a9;stroke-width:4;fill:none;marker-end:url(#a)}
+    .thin{stroke:#3e73a9;stroke-width:3;fill:none}
+    .icon{stroke:#164a7f;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3e73a9"/>
+    </marker>
+  </defs>
+  <text x="800" y="70" text-anchor="middle" class="title">Multimodal Movement Understanding &amp; Natural-Language Feedback</text>
+
+  <!-- Inputs -->
+  <rect x="30" y="140" rx="14" ry="14" width="215" height="135" class="box"/>
+  <path d="M75 185 h50 v32 h-50z M88 175 h24 l6 10 h-36z" fill="#164a7f"/>
+  <circle cx="100" cy="201" r="8" fill="#fff"/>
+  <circle cx="175" cy="178" r="6" fill="#164a7f"/>
+  <path d="M175 185 v20 M160 195 l15-10 15 10 M175 205 l-13 25 M175 205 l13 25" class="icon"/>
+  <text x="137" y="240" text-anchor="middle" class="h">Video / Pose</text>
+  <text x="137" y="300" text-anchor="middle" class="s">RGB video or 2D/3D pose keypoints</text>
+
+  <rect x="30" y="335" rx="14" ry="14" width="215" height="135" class="box"/>
+  <path d="M70 430 V370 H200" class="icon"/>
+  <path d="M80 420 L105 390 L128 410 L150 382 L180 400" class="icon"/>
+  <text x="137" y="455" text-anchor="middle" class="h">Movement Velocity</text>
+  <text x="137" y="490" text-anchor="middle" class="s">Joint or end-effector velocity over time</text>
+
+  <rect x="30" y="530" rx="14" ry="14" width="215" height="135" class="box"/>
+  <rect x="82" y="567" width="65" height="42" rx="8" fill="#3d648a"/>
+  <path d="M120 575 V545 M120 575 L165 560 M120 575 L155 605" class="icon"/>
+  <text x="172" y="556" class="s">x</text><text x="165" y="610" class="s">y</text><text x="115" y="542" class="s">z</text>
+  <text x="137" y="640" text-anchor="middle" class="h">IMU</text>
+  <text x="137" y="690" text-anchor="middle" class="s">Accelerometer / gyroscope</text>
+
+  <path d="M245 208 H292 V402 H330" class="thin"/>
+  <path d="M245 402 H330" class="arrow"/>
+  <path d="M245 598 H292 V402" class="thin"/>
+
+  <!-- Features -->
+  <rect x="330" y="305" rx="14" ry="14" width="215" height="235" class="box"/>
+  <path d="M410 350 l32-18 32 18-32 18z M410 366 l32 18 32-18 M410 383 l32 18 32-18" class="icon"/>
+  <text x="437" y="445" text-anchor="middle" class="h">Multimodal Features</text>
+  <text x="437" y="482" text-anchor="middle" class="b">Fused spatiotemporal features</text>
+  <text x="437" y="505" text-anchor="middle" class="b">from video, velocity, and IMU</text>
+
+  <path d="M545 422 H590" class="arrow"/>
+
+  <!-- Estimation -->
+  <rect x="590" y="305" rx="14" ry="14" width="240" height="235" class="box"/>
+  <circle cx="710" cy="365" r="35" class="icon"/>
+  <path d="M710 330 v70 M682 348 q28 20 0 38 M738 348 q-28 20 0 38" class="icon"/>
+  <text x="710" y="445" text-anchor="middle" class="h">Movement-State Estimation</text>
+  <rect x="610" y="475" rx="10" ry="10" width="200" height="48" class="inner"/>
+  <text x="710" y="496" text-anchor="middle" class="b">too_slow / on_target /</text>
+  <text x="710" y="518" text-anchor="middle" class="b">too_fast / unstable</text>
+
+  <path d="M830 422 H870" class="arrow"/>
+
+  <!-- Deviation -->
+  <rect x="870" y="305" rx="14" ry="14" width="240" height="235" class="box"/>
+  <rect x="950" y="345" width="18" height="35" fill="#4d84bb"/>
+  <rect x="978" y="330" width="18" height="50" fill="#3e73a9"/>
+  <rect x="1006" y="310" width="18" height="70" fill="#245a90"/>
+  <text x="990" y="430" text-anchor="middle" class="h">Structured Deviation</text>
+  <text x="990" y="455" text-anchor="middle" class="h">from Target</text>
+  <rect x="895" y="475" rx="10" ry="10" width="190" height="100" class="inner"/>
+  <text x="920" y="500" class="b">• velocity error</text>
+  <text x="920" y="522" class="b">• path error</text>
+  <text x="920" y="544" class="b">• smoothness error</text>
+  <text x="920" y="566" class="b">• duration error</text>
+
+  <path d="M1110 422 H1150" class="arrow"/>
+
+  <!-- Language -->
+  <rect x="1150" y="305" rx="14" ry="14" width="230" height="235" class="box"/>
+  <rect x="1210" y="338" rx="16" ry="16" width="110" height="65" class="icon"/>
+  <path d="M1235 403 l-10 16 24-16" class="icon"/>
+  <circle cx="1240" cy="370" r="5" fill="#164a7f"/><circle cx="1265" cy="370" r="5" fill="#164a7f"/><circle cx="1290" cy="370" r="5" fill="#164a7f"/>
+  <text x="1265" y="440" text-anchor="middle" class="h">Natural-Language</text>
+  <text x="1265" y="466" text-anchor="middle" class="h">Feedback</text>
+  <rect x="1175" y="488" rx="10" ry="10" width="180" height="92" class="inner"/>
+  <text x="1265" y="515" text-anchor="middle" class="b">“Your wrist moved too fast.</text>
+  <text x="1265" y="538" text-anchor="middle" class="b">Reduce speed slightly on</text>
+  <text x="1265" y="561" text-anchor="middle" class="b">the next trial.”</text>
+
+  <path d="M1380 422 H1415" class="arrow"/>
+
+  <!-- Evaluation -->
+  <rect x="1415" y="305" rx="14" ry="14" width="160" height="235" class="box"/>
+  <path d="M1445 385 V335 M1445 385 H1545 M1460 370 L1490 350 L1515 360 L1540 325" class="icon"/>
+  <text x="1495" y="435" text-anchor="middle" class="h">Next-Trial</text>
+  <text x="1495" y="462" text-anchor="middle" class="h">Behavior Change</text>
+  <text x="1495" y="489" text-anchor="middle" class="h">Evaluation</text>
+  <text x="1495" y="525" text-anchor="middle" class="s">Measure improvement</text>
+  <text x="1495" y="546" text-anchor="middle" class="s">in subsequent trials</text>
+
+  <line x1="50" x2="270" y1="820" y2="820" stroke="#8ea9c5" stroke-width="2"/>
+  <line x1="1330" x2="1550" y1="820" y2="820" stroke="#8ea9c5" stroke-width="2"/>
+  <text x="800" y="826" text-anchor="middle" class="s">Current demo: synthetic data. Future extensions: MediaPipe / OpenCV, serial or BLE IMU, expert comparison, human evaluation.</text>
+</svg>
