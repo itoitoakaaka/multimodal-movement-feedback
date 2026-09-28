@@ -1,5 +1,9 @@
 # Multimodal Movement Understanding & Natural-Language Feedback
 
+<p align="center">
+  <img src="assets/overview.svg" alt="Multimodal movement feedback pipeline" width="100%">
+</p>
+
 Flow:
 
 video / pose + movement velocity + IMU
